@@ -1,2 +1,137 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+let str = "Olá, mundo!"; // String
+let num = 42;            // Número
+let bool = true;         // Booleano
+
+console.log(typeof str); // string
+console.log(typeof num); // number
+console.log(typeof bool); // boolean
+
+
+let primeiroNome = "Bia";
+let ultimoNome = "Piassa";
+
+let nomeCompletoComOperador = primeiroNome + " " + ultimoNome;
+let nomeCompletoComTemplateString = ${primeiroNome} ${ultimoNome};
+
+console.log(nomeCompletoComOperador);         // Bia Piassa
+console.log(nomeCompletoComTemplateString);   // Bia Piassa
+
+
+let numero = 2;
+let texto = "O número é";
+
+let frase = ${texto} ${numero};
+console.log(frase); // O número é 2
+
+
+let variavel = "Valor inicial";
+console.log(variavel); // Valor inicial
+
+variavel = 12345;
+console.log(variavel); // 12345
+
+
+var globalVar = "Eu sou global";
+if (true) {
+    var localVar = "Eu sou local";
+    console.log(globalVar); // Eu sou global
+    console.log(localVar);  // Eu sou local
+}
+console.log(globalVar); // Eu sou global
+console.log(localVar);  // Eu sou local
+
+// Usando let
+let globalLet = "Eu sou global";
+if (true) {
+    let localLet = "Eu sou local";
+    console.log(globalLet); // Eu sou global
+    console.log(localLet);  // Eu sou local
+}
+console.log(globalLet); // Eu sou global
+console.log(localLet);  // ReferenceError: localLet is not defined
+
+let estaChovendo = true;
+
+if (estaChovendo) {
+    console.log("Leve um guarda-chuva.");
+} else {
+    console.log("Você não precisa de um guarda-chuva.");
+}
+
+let n1 = 8;
+let n2 = 9;
+let n3 = 5.5;
+
+let media = (n1 + n2 + n3) / 3;
+console.log("Média:", media); // Média: 7.166666666666667
+
+
+let base = 10;  // Exemplo de base
+let altura = 5; // Exemplo de altura
+
+let areaTriangulo = (base * altura) / 2;
+console.log("Área do triângulo:", areaTriangulo); // Área do triângulo: 25
+
+
+let raio = 7; // Exemplo de raio
+let areaCirculo = Math.PI * raio * raio;
+console.log("Área do círculo:", areaCirculo); // Área do círculo: 153.93804002589985
+
+
+let V = 135; // Volts
+let I = 5;   // Amperes
+
+let resistencia = V / I;
+console.log("Resistência:", resistencia, "ohms"); // Resistência: 27 ohms
+
+
+let salarioBruto = 3000; // Exemplo de salário bruto
+let imposto = 0.20;      // 20%
+
+let salarioLiquido = salarioBruto * (1 - imposto);
+console.log("Salário líquido:", salarioLiquido); // Salário líquido: 2400
+
+
+let precoGasolina = 5.50; // Valor por litro
+let litrosAbastecidos = 40; // Exemplo de litros
+
+let valorGasto = precoGasolina * litrosAbastecidos;
+console.log("Valor gasto para abastecer:", valorGasto); // Valor gasto para abastecer: 220
+
+
+let potenciaW = 1750; // Potência em watts
+let horasPorDia = 8;
+let diasPorMes = 25;
+let custoPorKW = 0.75; // Custo por kWh
+
+// Convertendo potência para kW
+let potenciaKW = potenciaW / 1000;
+
+let consumoMensal = potenciaKW * horasPorDia * diasPorMes;
+let custoMensal = consumoMensal * custoPorKW;
+
+console.log("Custo mensal:", custoMensal); // Custo mensal: 105.0
+
+
+let nota1 = 9;
+let nota2 = 8;
+let nota3 = 7;
+
+let media = (nota1 + nota2 + nota3) / 3;
+
+if (media >= 6) {
+    console.log("Aprovado");
+} else if (media > 4 && media < 6) {
+    console.log("Exame");
+} else {
+    console.log("Reprovado");
+}
+
+
+let peso = 70;  // Exemplo de peso em kg
+let altura = 1.75; // Exemplo de altura em metros
+
+let imc = peso / (altura * altura);
+console.log("IMC:", imc); // IMC: 22.857142857142858
